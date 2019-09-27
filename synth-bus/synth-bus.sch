@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:synth-bus-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,21 +14,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector:Screw_Terminal_01x06 J1
-U 1 1 5D55B487
-P 1200 2500
-F 0 "J1" H 1118 2917 50  0000 C CNN
-F 1 "Screw_Terminal_01x06" H 1118 2826 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-6_P5.08mm" H 1200 2500 50  0001 C CNN
-F 3 "~" H 1200 2500 50  0001 C CNN
-	1    1200 2500
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	1400 2500 1700 2500
-Wire Wire Line
-	1400 2600 1700 2600
 Wire Wire Line
 	1400 2700 1700 2700
 Wire Wire Line
@@ -35,12 +23,12 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR04
 U 1 1 5D573433
-P 1700 2400
-F 0 "#PWR04" H 1700 2250 50  0001 C CNN
-F 1 "+5V" V 1715 2528 50  0000 L CNN
-F 2 "" H 1700 2400 50  0001 C CNN
-F 3 "" H 1700 2400 50  0001 C CNN
-	1    1700 2400
+P 1700 2600
+F 0 "#PWR04" H 1700 2450 50  0001 C CNN
+F 1 "+5V" V 1715 2728 50  0000 L CNN
+F 2 "" H 1700 2600 50  0001 C CNN
+F 3 "" H 1700 2600 50  0001 C CNN
+	1    1700 2600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -57,22 +45,18 @@ $EndComp
 $Comp
 L power:-12V #PWR06
 U 1 1 5D575010
-P 1700 2600
-F 0 "#PWR06" H 1700 2700 50  0001 C CNN
-F 1 "-12V" V 1715 2728 50  0000 L CNN
-F 2 "" H 1700 2600 50  0001 C CNN
-F 3 "" H 1700 2600 50  0001 C CNN
-	1    1700 2600
+P 1700 2300
+F 0 "#PWR06" H 1700 2400 50  0001 C CNN
+F 1 "-12V" V 1715 2428 50  0000 L CNN
+F 2 "" H 1700 2300 50  0001 C CNN
+F 3 "" H 1700 2300 50  0001 C CNN
+	1    1700 2300
 	0    1    1    0   
 $EndComp
 Text GLabel 1700 2700 2    50   Input ~ 0
 CV
 Text GLabel 1700 2800 2    50   Input ~ 0
 GATE
-Wire Wire Line
-	1400 2400 1700 2400
-Wire Wire Line
-	1400 2300 1700 2300
 $Comp
 L Device:LED D1
 U 1 1 5D57CE1F
@@ -191,15 +175,15 @@ Wire Wire Line
 Wire Wire Line
 	2100 4250 2100 4400
 $Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J2
+L Connector_Generic:Conn_02x08_Odd_Even J2
 U 1 1 5D589F87
-P 4550 2600
-F 0 "J2" H 4600 3117 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 4600 3026 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 4550 2600 50  0001 C CNN
-F 3 "~" H 4550 2600 50  0001 C CNN
-	1    4550 2600
-	1    0    0    -1  
+P 4650 2700
+F 0 "J2" H 4700 3217 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 4700 3126 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 4650 2700 50  0001 C CNN
+F 3 "~" H 4650 2700 50  0001 C CNN
+	1    4650 2700
+	-1   0    0    1   
 $EndComp
 Text GLabel 4250 2300 0    50   Input ~ 0
 GATE
@@ -409,24 +393,13 @@ $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5D5A74AA
-P 1700 2300
-F 0 "#PWR03" H 1700 2050 50  0001 C CNN
-F 1 "GND" V 1705 2172 50  0000 R CNN
-F 2 "" H 1700 2300 50  0001 C CNN
-F 3 "" H 1700 2300 50  0001 C CNN
-	1    1700 2300
+P 1700 2400
+F 0 "#PWR03" H 1700 2150 50  0001 C CNN
+F 1 "GND" V 1705 2272 50  0000 R CNN
+F 2 "" H 1700 2400 50  0001 C CNN
+F 3 "" H 1700 2400 50  0001 C CNN
+	1    1700 2400
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J5
-U 1 1 5D5B741A
-P 6050 2600
-F 0 "J5" H 6100 3117 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 6100 3026 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 6050 2600 50  0001 C CNN
-F 3 "~" H 6050 2600 50  0001 C CNN
-	1    6050 2600
-	1    0    0    -1  
 $EndComp
 Text GLabel 5750 2300 0    50   Input ~ 0
 GATE
@@ -446,22 +419,6 @@ Wire Wire Line
 	5850 2900 5750 2900
 Wire Wire Line
 	5850 3000 5750 3000
-Wire Wire Line
-	6350 3000 6450 3000
-Wire Wire Line
-	6350 2900 6450 2900
-Wire Wire Line
-	6350 2800 6450 2800
-Wire Wire Line
-	6350 2700 6450 2700
-Wire Wire Line
-	6350 2600 6450 2600
-Wire Wire Line
-	6350 2500 6450 2500
-Wire Wire Line
-	6350 2400 6450 2400
-Wire Wire Line
-	6350 2300 6450 2300
 Text GLabel 5750 2400 0    50   Input ~ 0
 CV
 $Comp
@@ -599,17 +556,6 @@ F 2 "" H 6450 3000 50  0001 C CNN
 F 3 "" H 6450 3000 50  0001 C CNN
 	1    6450 3000
 	0    1    -1   0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J8
-U 1 1 5D5BE3EA
-P 7500 2600
-F 0 "J8" H 7550 3117 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 7550 3026 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 7500 2600 50  0001 C CNN
-F 3 "~" H 7500 2600 50  0001 C CNN
-	1    7500 2600
-	1    0    0    -1  
 $EndComp
 Text GLabel 7200 2300 0    50   Input ~ 0
 GATE
@@ -782,17 +728,6 @@ F 2 "" H 7900 3000 50  0001 C CNN
 F 3 "" H 7900 3000 50  0001 C CNN
 	1    7900 3000
 	0    1    -1   0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J11
-U 1 1 5D5C9347
-P 8950 2600
-F 0 "J11" H 9000 3117 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 9000 3026 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 8950 2600 50  0001 C CNN
-F 3 "~" H 8950 2600 50  0001 C CNN
-	1    8950 2600
-	1    0    0    -1  
 $EndComp
 Text GLabel 8650 2300 0    50   Input ~ 0
 GATE
@@ -967,15 +902,15 @@ F 3 "" H 9350 3000 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J3
+L Connector_Generic:Conn_02x08_Odd_Even J3
 U 1 1 5D5DB691
-P 4550 3700
-F 0 "J3" H 4600 4217 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 4600 4126 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 4550 3700 50  0001 C CNN
-F 3 "~" H 4550 3700 50  0001 C CNN
-	1    4550 3700
-	1    0    0    -1  
+P 4650 3800
+F 0 "J3" H 4700 4317 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 4700 4226 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 4650 3800 50  0001 C CNN
+F 3 "~" H 4650 3800 50  0001 C CNN
+	1    4650 3800
+	-1   0    0    1   
 $EndComp
 Text GLabel 4250 3400 0    50   Input ~ 0
 GATE
@@ -1150,15 +1085,15 @@ F 3 "" H 4950 4100 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J6
+L Connector_Generic:Conn_02x08_Odd_Even J6
 U 1 1 5D5DB727
-P 6050 3700
-F 0 "J6" H 6100 4217 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 6100 4126 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 6050 3700 50  0001 C CNN
-F 3 "~" H 6050 3700 50  0001 C CNN
-	1    6050 3700
-	1    0    0    -1  
+P 6150 3800
+F 0 "J6" H 6200 4317 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 6200 4226 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 6150 3800 50  0001 C CNN
+F 3 "~" H 6150 3800 50  0001 C CNN
+	1    6150 3800
+	-1   0    0    1   
 $EndComp
 Text GLabel 5750 3400 0    50   Input ~ 0
 GATE
@@ -1333,15 +1268,15 @@ F 3 "" H 6450 4100 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J9
+L Connector_Generic:Conn_02x08_Odd_Even J9
 U 1 1 5D5DB7BD
-P 7500 3700
-F 0 "J9" H 7550 4217 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 7550 4126 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 7500 3700 50  0001 C CNN
-F 3 "~" H 7500 3700 50  0001 C CNN
-	1    7500 3700
-	1    0    0    -1  
+P 7600 3800
+F 0 "J9" H 7650 4317 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 7650 4226 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 7600 3800 50  0001 C CNN
+F 3 "~" H 7600 3800 50  0001 C CNN
+	1    7600 3800
+	-1   0    0    1   
 $EndComp
 Text GLabel 7200 3400 0    50   Input ~ 0
 GATE
@@ -1515,35 +1450,8 @@ F 3 "" H 7900 4100 50  0001 C CNN
 	1    7900 4100
 	0    1    -1   0   
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J12
-U 1 1 5D5DB853
-P 8950 3700
-F 0 "J12" H 9000 4217 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 9000 4126 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 8950 3700 50  0001 C CNN
-F 3 "~" H 8950 3700 50  0001 C CNN
-	1    8950 3700
-	1    0    0    -1  
-$EndComp
 Text GLabel 8650 3400 0    50   Input ~ 0
 GATE
-Wire Wire Line
-	8650 3400 8750 3400
-Wire Wire Line
-	8750 3500 8650 3500
-Wire Wire Line
-	8750 3600 8650 3600
-Wire Wire Line
-	8750 3700 8650 3700
-Wire Wire Line
-	8750 3800 8650 3800
-Wire Wire Line
-	8750 3900 8650 3900
-Wire Wire Line
-	8750 4000 8650 4000
-Wire Wire Line
-	8750 4100 8650 4100
 Wire Wire Line
 	9250 4100 9350 4100
 Wire Wire Line
@@ -1699,15 +1607,15 @@ F 3 "" H 9350 4100 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J4
+L Connector_Generic:Conn_02x08_Odd_Even J4
 U 1 1 5D612070
-P 4550 4800
-F 0 "J4" H 4600 5317 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 4600 5226 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 4550 4800 50  0001 C CNN
-F 3 "~" H 4550 4800 50  0001 C CNN
-	1    4550 4800
-	1    0    0    -1  
+P 4650 4900
+F 0 "J4" H 4700 5417 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 4700 5326 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 4650 4900 50  0001 C CNN
+F 3 "~" H 4650 4900 50  0001 C CNN
+	1    4650 4900
+	-1   0    0    1   
 $EndComp
 Text GLabel 4250 4500 0    50   Input ~ 0
 GATE
@@ -1882,15 +1790,15 @@ F 3 "" H 4950 5200 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J7
+L Connector_Generic:Conn_02x08_Odd_Even J7
 U 1 1 5D612106
-P 6050 4800
-F 0 "J7" H 6100 5317 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 6100 5226 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 6050 4800 50  0001 C CNN
-F 3 "~" H 6050 4800 50  0001 C CNN
-	1    6050 4800
-	1    0    0    -1  
+P 6150 4900
+F 0 "J7" H 6200 5417 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 6200 5326 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 6150 4900 50  0001 C CNN
+F 3 "~" H 6150 4900 50  0001 C CNN
+	1    6150 4900
+	-1   0    0    1   
 $EndComp
 Text GLabel 5750 4500 0    50   Input ~ 0
 GATE
@@ -2065,15 +1973,15 @@ F 3 "" H 6450 5200 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J10
+L Connector_Generic:Conn_02x08_Odd_Even J10
 U 1 1 5D61219C
-P 7500 4800
-F 0 "J10" H 7550 5317 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 7550 5226 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 7500 4800 50  0001 C CNN
-F 3 "~" H 7500 4800 50  0001 C CNN
-	1    7500 4800
-	1    0    0    -1  
+P 7600 4900
+F 0 "J10" H 7650 5417 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 7650 5326 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 7600 4900 50  0001 C CNN
+F 3 "~" H 7600 4900 50  0001 C CNN
+	1    7600 4900
+	-1   0    0    1   
 $EndComp
 Text GLabel 7200 4500 0    50   Input ~ 0
 GATE
@@ -2248,15 +2156,15 @@ F 3 "" H 7900 5200 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Row_Letter_Last J13
+L Connector_Generic:Conn_02x08_Odd_Even J13
 U 1 1 5D612232
-P 8950 4800
-F 0 "J13" H 9000 5317 50  0000 C CNN
-F 1 "Conn_02x08_Row_Letter_Last" H 9000 5226 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-1634_2x08x2.54mm_Straight" H 8950 4800 50  0001 C CNN
-F 3 "~" H 8950 4800 50  0001 C CNN
-	1    8950 4800
-	1    0    0    -1  
+P 9050 4900
+F 0 "J13" H 9100 5417 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 9100 5326 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 9050 4900 50  0001 C CNN
+F 3 "~" H 9050 4900 50  0001 C CNN
+	1    9050 4900
+	-1   0    0    1   
 $EndComp
 Text GLabel 8650 4500 0    50   Input ~ 0
 GATE
@@ -2430,4 +2338,97 @@ F 3 "" H 9350 5200 50  0001 C CNN
 	1    9350 5200
 	0    1    -1   0   
 $EndComp
+Wire Wire Line
+	8750 3800 8650 3800
+Wire Wire Line
+	8750 3900 8650 3900
+Wire Wire Line
+	8750 4000 8650 4000
+Wire Wire Line
+	8750 4100 8650 4100
+Wire Wire Line
+	8650 3400 8750 3400
+Wire Wire Line
+	8750 3500 8650 3500
+Wire Wire Line
+	8750 3600 8650 3600
+Wire Wire Line
+	8750 3700 8650 3700
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J12
+U 1 1 5D5DB853
+P 9050 3800
+F 0 "J12" H 9100 4317 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 9100 4226 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 9050 3800 50  0001 C CNN
+F 3 "~" H 9050 3800 50  0001 C CNN
+	1    9050 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J11
+U 1 1 5D5C9347
+P 9050 2700
+F 0 "J11" H 9100 3217 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 9100 3126 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 9050 2700 50  0001 C CNN
+F 3 "~" H 9050 2700 50  0001 C CNN
+	1    9050 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J8
+U 1 1 5D5BE3EA
+P 7600 2700
+F 0 "J8" H 7650 3217 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 7650 3126 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 7600 2700 50  0001 C CNN
+F 3 "~" H 7600 2700 50  0001 C CNN
+	1    7600 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J5
+U 1 1 5D5B741A
+P 6150 2700
+F 0 "J5" H 6200 3217 50  0000 C CNN
+F 1 "Conn_02x08_Row_Letter_Last" H 6200 3126 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 6150 2700 50  0001 C CNN
+F 3 "~" H 6150 2700 50  0001 C CNN
+	1    6150 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 3000 6450 3000
+Wire Wire Line
+	6350 2500 6450 2500
+Wire Wire Line
+	6350 2400 6450 2400
+Wire Wire Line
+	6350 2300 6450 2300
+Wire Wire Line
+	6350 2900 6450 2900
+Wire Wire Line
+	6350 2800 6450 2800
+Wire Wire Line
+	6350 2700 6450 2700
+Wire Wire Line
+	6350 2600 6450 2600
+$Comp
+L Connector:Screw_Terminal_01x06 J1
+U 1 1 5D55B487
+P 1200 2500
+F 0 "J1" H 1118 2917 50  0000 C CNN
+F 1 "Screw_Terminal_01x06" H 1118 2826 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-6_P5.08mm" H 1200 2500 50  0001 C CNN
+F 3 "~" H 1200 2500 50  0001 C CNN
+	1    1200 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 2600 1700 2600
+Wire Wire Line
+	1400 2400 1700 2400
+Wire Wire Line
+	1700 2300 1400 2300
 $EndSCHEMATC
