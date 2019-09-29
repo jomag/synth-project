@@ -902,10 +902,10 @@ F 3 "" H 9350 3000 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J3
+L Connector_Generic:Conn_02x08_Odd_Even J10
 U 1 1 5D5DB691
 P 4650 3800
-F 0 "J3" H 4700 4317 50  0000 C CNN
+F 0 "J10" H 4700 4317 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 4700 4226 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 4650 3800 50  0001 C CNN
 F 3 "~" H 4650 3800 50  0001 C CNN
@@ -1085,10 +1085,10 @@ F 3 "" H 4950 4100 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J6
+L Connector_Generic:Conn_02x08_Odd_Even J11
 U 1 1 5D5DB727
 P 6150 3800
-F 0 "J6" H 6200 4317 50  0000 C CNN
+F 0 "J11" H 6200 4317 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 6200 4226 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 6150 3800 50  0001 C CNN
 F 3 "~" H 6150 3800 50  0001 C CNN
@@ -1268,10 +1268,10 @@ F 3 "" H 6450 4100 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J9
+L Connector_Generic:Conn_02x08_Odd_Even J12
 U 1 1 5D5DB7BD
 P 7600 3800
-F 0 "J9" H 7650 4317 50  0000 C CNN
+F 0 "J12" H 7650 4317 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 7650 4226 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 7600 3800 50  0001 C CNN
 F 3 "~" H 7600 3800 50  0001 C CNN
@@ -1607,10 +1607,10 @@ F 3 "" H 9350 4100 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J4
+L Connector_Generic:Conn_02x08_Odd_Even J3
 U 1 1 5D612070
 P 4650 4900
-F 0 "J4" H 4700 5417 50  0000 C CNN
+F 0 "J3" H 4700 5417 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 4700 5326 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 4650 4900 50  0001 C CNN
 F 3 "~" H 4650 4900 50  0001 C CNN
@@ -1790,10 +1790,10 @@ F 3 "" H 4950 5200 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J7
+L Connector_Generic:Conn_02x08_Odd_Even J5
 U 1 1 5D612106
 P 6150 4900
-F 0 "J7" H 6200 5417 50  0000 C CNN
+F 0 "J5" H 6200 5417 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 6200 5326 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 6150 4900 50  0001 C CNN
 F 3 "~" H 6150 4900 50  0001 C CNN
@@ -1973,10 +1973,10 @@ F 3 "" H 6450 5200 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J10
+L Connector_Generic:Conn_02x08_Odd_Even J7
 U 1 1 5D61219C
 P 7600 4900
-F 0 "J10" H 7650 5417 50  0000 C CNN
+F 0 "J7" H 7650 5417 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 7650 5326 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 7600 4900 50  0001 C CNN
 F 3 "~" H 7600 4900 50  0001 C CNN
@@ -2156,10 +2156,10 @@ F 3 "" H 7900 5200 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J13
+L Connector_Generic:Conn_02x08_Odd_Even J9
 U 1 1 5D612232
 P 9050 4900
-F 0 "J13" H 9100 5417 50  0000 C CNN
+F 0 "J9" H 9100 5417 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 9100 5326 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 9050 4900 50  0001 C CNN
 F 3 "~" H 9050 4900 50  0001 C CNN
@@ -2355,10 +2355,10 @@ Wire Wire Line
 Wire Wire Line
 	8750 3700 8650 3700
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J12
+L Connector_Generic:Conn_02x08_Odd_Even J8
 U 1 1 5D5DB853
 P 9050 3800
-F 0 "J12" H 9100 4317 50  0000 C CNN
+F 0 "J8" H 9100 4317 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 9100 4226 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 9050 3800 50  0001 C CNN
 F 3 "~" H 9050 3800 50  0001 C CNN
@@ -2366,10 +2366,10 @@ F 3 "~" H 9050 3800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J11
+L Connector_Generic:Conn_02x08_Odd_Even J13
 U 1 1 5D5C9347
 P 9050 2700
-F 0 "J11" H 9100 3217 50  0000 C CNN
+F 0 "J13" H 9100 3217 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 9100 3126 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 9050 2700 50  0001 C CNN
 F 3 "~" H 9050 2700 50  0001 C CNN
@@ -2377,10 +2377,10 @@ F 3 "~" H 9050 2700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J8
+L Connector_Generic:Conn_02x08_Odd_Even J6
 U 1 1 5D5BE3EA
 P 7600 2700
-F 0 "J8" H 7650 3217 50  0000 C CNN
+F 0 "J6" H 7650 3217 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 7650 3126 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 7600 2700 50  0001 C CNN
 F 3 "~" H 7600 2700 50  0001 C CNN
@@ -2388,10 +2388,10 @@ F 3 "~" H 7600 2700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even J5
+L Connector_Generic:Conn_02x08_Odd_Even J4
 U 1 1 5D5B741A
 P 6150 2700
-F 0 "J5" H 6200 3217 50  0000 C CNN
+F 0 "J4" H 6200 3217 50  0000 C CNN
 F 1 "Conn_02x08_Row_Letter_Last" H 6200 3126 50  0000 C CNN
 F 2 "Connector_Multicomp:Multicomp_MC9A12-1634_2x08_P2.54mm_Vertical" H 6150 2700 50  0001 C CNN
 F 3 "~" H 6150 2700 50  0001 C CNN
