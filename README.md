@@ -17,3 +17,6 @@ https://cabintechglobal.com/tune3340
 CEM3340 VCO (Voltage Controlled Oscillator) designs
 https://electricdruid.net/cem3340-vco-voltage-controlled-oscillator-designs/
 
+Kassutronics blog: VCO CEM3340:
+https://kassu2000.blogspot.com/2018/06/vco-3340.html
+
