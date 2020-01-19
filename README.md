@@ -20,3 +20,12 @@ https://electricdruid.net/cem3340-vco-voltage-controlled-oscillator-designs/
 Kassutronics blog: VCO CEM3340:
 https://kassu2000.blogspot.com/2018/06/vco-3340.html
 
+Collection of a few simple Eurorack module PCB and some notes about
+components etc:
+https://github.com/nickajeglin/Eurorack-pcbs
+
+Understanding audio jack switches
+https://www.cuidevices.com/blog/understanding-audio-jack-switches-and-schematic
+
+Timo Rozendal CEM3340 VCO design
+http://www.timorozendal.com/files/cem3340vco_schematic.pdfs
