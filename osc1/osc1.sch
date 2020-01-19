@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:osc1-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -913,73 +912,41 @@ Wire Wire Line
 $Comp
 L Device:R_POT RV?
 U 1 1 5DCC115F
-P 850 4450
-F 0 "RV?" V 643 4450 50  0000 C CNN
-F 1 "100k?" V 734 4450 50  0000 C CNN
-F 2 "" H 850 4450 50  0001 C CNN
-F 3 "~" H 850 4450 50  0001 C CNN
-	1    850  4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5DCCB73D
-P 850 3800
-F 0 "#PWR?" H 850 3650 50  0001 C CNN
-F 1 "+12V" H 865 3973 50  0000 C CNN
-F 2 "" H 850 3800 50  0001 C CNN
-F 3 "" H 850 3800 50  0001 C CNN
-	1    850  3800
+P 1500 4600
+F 0 "RV?" V 1293 4600 50  0000 C CNN
+F 1 "100k?" V 1384 4600 50  0000 C CNN
+F 2 "" H 1500 4600 50  0001 C CNN
+F 3 "~" H 1500 4600 50  0001 C CNN
+	1    1500 4600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5DCCC2FE
-P 850 4050
-F 0 "R?" V 643 4050 50  0000 C CNN
-F 1 "150k?" V 734 4050 50  0000 C CNN
-F 2 "" V 780 4050 50  0001 C CNN
-F 3 "~" H 850 4050 50  0001 C CNN
-	1    850  4050
-	-1   0    0    1   
+P 1900 4600
+F 0 "R?" V 1693 4600 50  0000 C CNN
+F 1 "150k?" V 1784 4600 50  0000 C CNN
+F 2 "" V 1830 4600 50  0001 C CNN
+F 3 "~" H 1900 4600 50  0001 C CNN
+	1    1900 4600
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	850  3900 850  3800
-Wire Wire Line
-	850  4200 850  4300
-$Comp
-L power:GND #PWR?
-U 1 1 5DCD529A
-P 850 4700
-F 0 "#PWR?" H 850 4450 50  0001 C CNN
-F 1 "GND" V 855 4572 50  0000 R CNN
-F 2 "" H 850 4700 50  0001 C CNN
-F 3 "" H 850 4700 50  0001 C CNN
-	1    850  4700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	850  4700 850  4600
 $Comp
 L Device:R R?
 U 1 1 5DCD9BD4
-P 1250 4450
-F 0 "R?" V 1043 4450 50  0000 C CNN
-F 1 "100k?" V 1134 4450 50  0000 C CNN
-F 2 "" V 1180 4450 50  0001 C CNN
-F 3 "~" H 1250 4450 50  0001 C CNN
-	1    1250 4450
+P 1900 4250
+F 0 "R?" V 1693 4250 50  0000 C CNN
+F 1 "100k?" V 1784 4250 50  0000 C CNN
+F 2 "" V 1830 4250 50  0001 C CNN
+F 3 "~" H 1900 4250 50  0001 C CNN
+	1    1900 4250
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1000 4450 1100 4450
-Wire Wire Line
-	1400 4450 1500 4450
-Text GLabel 1500 4450 2    50   Output ~ 0
+Text GLabel 2400 4600 2    50   Output ~ 0
 PWMCTL
 Text Notes 1200 3850 0    50   ~ 0
 PWM control is 0 to +5VDC\nfor 0% to 100% pulse width
-Text Notes 500  750  0    50   ~ 0
+Text Notes -2750 450  0    50   ~ 0
 Considerations:\n- Is a voltage ref required for PWM control etc?\n- Decoupling capacitors for IC’s plus bigger caps at power input.
 $Comp
 L power:GND #PWR?
@@ -1402,8 +1369,8 @@ Wire Wire Line
 Wire Wire Line
 	4900 6950 4900 7150
 Connection ~ 4900 7150
-Text Notes -2350 1150 0    50   ~ 0
-# Status:\n\n## SoftSync\n\nJack is connected directly to CEM3340 input\nwith only a cap for DC protection (?). If no plug\nis inserted, the input is tied to ground.\n\n*Done!*\n\n## HardSync\n\nTwo jacks, hard sync positive and hard sync negative, are\nused as described in figure 4 of the CEM3340 datasheet.\nI’ve not dived into the details in how this works: I’ve just\ncopied the datasheet example as precisely as possible.
+Text Notes -2600 2200 0    50   ~ 0
+# Status:\n\n## SoftSync\n\nJack is connected directly to CEM3340 input\nwith only a cap for DC protection (?). If no plug\nis inserted, the input is tied to ground.\n\n*Done!*\n\n## HardSync\n\nTwo jacks, hard sync positive and hard sync negative, are\nused as described in figure 4 of the CEM3340 datasheet.\nI’ve not dived into the details in how this works: I’ve just\ncopied the datasheet example as precisely as possible.\n\n## PWM\n\nThe PWM is largely copied from Kassutronics VCO. When no\nexternal PWM connected, the voltage divider and pot will give\na value between 4V and something a bit lower.
 Wire Wire Line
 	1700 6050 1750 6050
 Wire Wire Line
@@ -1423,4 +1390,105 @@ Wire Wire Line
 Wire Wire Line
 	1100 2850 1100 3050
 Connection ~ 1100 3050
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5E2872A3
+P 900 4350
+F 0 "J?" H 720 4283 50  0000 R CNN
+F 1 "PWM" H 720 4374 50  0000 R CNN
+F 2 "" H 900 4350 50  0001 C CNN
+F 3 "~" H 900 4350 50  0001 C CNN
+	1    900  4350
+	1    0    0    1   
+$EndComp
+NoConn ~ 10500 3550
+NoConn ~ 10500 2150
+NoConn ~ 10300 5650
+$Comp
+L power:+5V #PWR?
+U 1 1 5E2D8E2C
+P 1400 4100
+F 0 "#PWR?" H 1400 3950 50  0001 C CNN
+F 1 "+5V" H 1415 4273 50  0000 C CNN
+F 2 "" H 1400 4100 50  0001 C CNN
+F 3 "" H 1400 4100 50  0001 C CNN
+	1    1400 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 4250 1400 4100
+Wire Wire Line
+	1100 4250 1400 4250
+Connection ~ 1400 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5E321467
+P 1200 4550
+F 0 "#PWR?" H 1200 4300 50  0001 C CNN
+F 1 "GND" V 1205 4422 50  0000 R CNN
+F 2 "" H 1200 4550 50  0001 C CNN
+F 3 "" H 1200 4550 50  0001 C CNN
+	1    1200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 4550 1200 4450
+Wire Wire Line
+	1200 4450 1100 4450
+$Comp
+L power:GND #PWR?
+U 1 1 5E32EAD1
+P 1500 4850
+F 0 "#PWR?" H 1500 4600 50  0001 C CNN
+F 1 "GND" V 1505 4722 50  0000 R CNN
+F 2 "" H 1500 4850 50  0001 C CNN
+F 3 "" H 1500 4850 50  0001 C CNN
+	1    1500 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 4750 1500 4850
+Wire Wire Line
+	1500 4350 1500 4450
+Wire Wire Line
+	1100 4350 1500 4350
+Wire Wire Line
+	1650 4600 1750 4600
+Wire Wire Line
+	1400 4250 1750 4250
+Wire Wire Line
+	2050 4600 2200 4600
+Wire Wire Line
+	2200 4600 2200 4250
+Wire Wire Line
+	2200 4250 2050 4250
+$Comp
+L Device:R R?
+U 1 1 5E392C21
+P 2200 4850
+F 0 "R?" V 1993 4850 50  0000 C CNN
+F 1 "150k?" V 2084 4850 50  0000 C CNN
+F 2 "" V 2130 4850 50  0001 C CNN
+F 3 "~" H 2200 4850 50  0001 C CNN
+	1    2200 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4700 2200 4600
+Connection ~ 2200 4600
+$Comp
+L power:GND #PWR?
+U 1 1 5E39B988
+P 2200 5100
+F 0 "#PWR?" H 2200 4850 50  0001 C CNN
+F 1 "GND" V 2205 4972 50  0000 R CNN
+F 2 "" H 2200 5100 50  0001 C CNN
+F 3 "" H 2200 5100 50  0001 C CNN
+	1    2200 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5100 2200 5000
+Wire Wire Line
+	2200 4600 2400 4600
 $EndSCHEMATC
