@@ -13,6 +13,7 @@ http://dintree.com/
 
 Precision tuning of the AS3340 VCO
 https://cabintechglobal.com/tune3340
+http://www.alfarzpp.lv/eng/sc/Tuning%20the%20AS3340.pdf
 
 CEM3340 VCO (Voltage Controlled Oscillator) designs
 https://electricdruid.net/cem3340-vco-voltage-controlled-oscillator-designs/
@@ -29,3 +30,4 @@ https://www.cuidevices.com/blog/understanding-audio-jack-switches-and-schematic
 
 Timo Rozendal CEM3340 VCO design
 http://www.timorozendal.com/files/cem3340vco_schematic.pdfs
+
