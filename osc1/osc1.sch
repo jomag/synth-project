@@ -868,69 +868,50 @@ Wire Wire Line
 $Comp
 L Device:R_POT RV1
 U 1 1 5DCC115F
-P 850 4450
-F 0 "RV1" V 643 4450 50  0000 C CNN
-F 1 "100k?" V 734 4450 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 850 4450 50  0001 C CNN
-F 3 "~" H 850 4450 50  0001 C CNN
-	1    850  4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR0123
-U 1 1 5DCCB73D
-P 850 3800
-F 0 "#PWR0123" H 850 3650 50  0001 C CNN
-F 1 "+12V" H 865 3973 50  0000 C CNN
-F 2 "" H 850 3800 50  0001 C CNN
-F 3 "" H 850 3800 50  0001 C CNN
-	1    850  3800
+P 1850 4600
+F 0 "RV1" V 1643 4600 50  0000 C CNN
+F 1 "100k?" V 1734 4600 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 1850 4600 50  0001 C CNN
+F 3 "~" H 1850 4600 50  0001 C CNN
+	1    1850 4600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 5DCCC2FE
-P 850 4050
-F 0 "R1" V 643 4050 50  0000 C CNN
-F 1 "150k?" V 734 4050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 780 4050 50  0001 C CNN
-F 3 "~" H 850 4050 50  0001 C CNN
-	1    850  4050
+P 2350 4850
+F 0 "R1" V 2143 4850 50  0000 C CNN
+F 1 "150k?" V 2234 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2280 4850 50  0001 C CNN
+F 3 "~" H 2350 4850 50  0001 C CNN
+	1    2350 4850
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	850  3900 850  3800
-Wire Wire Line
-	850  4200 850  4300
 $Comp
 L power:GND #PWR0124
 U 1 1 5DCD529A
-P 850 4700
-F 0 "#PWR0124" H 850 4450 50  0001 C CNN
-F 1 "GND" V 855 4572 50  0000 R CNN
-F 2 "" H 850 4700 50  0001 C CNN
-F 3 "" H 850 4700 50  0001 C CNN
-	1    850  4700
+P 1850 4850
+F 0 "#PWR0124" H 1850 4600 50  0001 C CNN
+F 1 "GND" V 1855 4722 50  0000 R CNN
+F 2 "" H 1850 4850 50  0001 C CNN
+F 3 "" H 1850 4850 50  0001 C CNN
+	1    1850 4850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	850  4700 850  4600
+	1850 4850 1850 4750
 $Comp
 L Device:R R2
 U 1 1 5DCD9BD4
-P 1250 4450
-F 0 "R2" V 1043 4450 50  0000 C CNN
-F 1 "100k?" V 1134 4450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1180 4450 50  0001 C CNN
-F 3 "~" H 1250 4450 50  0001 C CNN
-	1    1250 4450
+P 2150 4250
+F 0 "R2" V 1943 4250 50  0000 C CNN
+F 1 "100k?" V 2034 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 4250 50  0001 C CNN
+F 3 "~" H 2150 4250 50  0001 C CNN
+	1    2150 4250
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1000 4450 1100 4450
-Wire Wire Line
-	1400 4450 1500 4450
-Text GLabel 1500 4450 2    50   Output ~ 0
+Text GLabel 2450 4600 2    50   Output ~ 0
 PWMCTL
 Text Notes 1200 3850 0    50   ~ 0
 PWM control is 0 to +5VDC\nfor 0% to 100% pulse width
@@ -1357,8 +1338,8 @@ Wire Wire Line
 Wire Wire Line
 	4900 6950 4900 7150
 Connection ~ 4900 7150
-Text Notes -2350 1150 0    50   ~ 0
-# Status:\n\n## SoftSync\n\nJack is connected directly to CEM3340 input\nwith only a cap for DC protection (?). If no plug\nis inserted, the input is tied to ground.\n\n*Done!*\n\n## HardSync\n\nTwo jacks, hard sync positive and hard sync negative, are\nused as described in figure 4 of the CEM3340 datasheet.\nI’ve not dived into the details in how this works: I’ve just\ncopied the datasheet example as precisely as possible.
+Text Notes -2700 1400 0    50   ~ 0
+# Status:\n\n## SoftSync\n\nJack is connected directly to CEM3340 input\nwith only a cap for DC protection (?). If no plug\nis inserted, the input is tied to ground.\n\n*Done!*\n\n## HardSync\n\nTwo jacks, hard sync positive and hard sync negative, are\nused as described in figure 4 of the CEM3340 datasheet.\nI’ve not dived into the details in how this works: I’ve just\ncopied the datasheet example as precisely as possible.\n\n## PWM\n\nThe PWM is largely copied from Kassutronics VCO. When no\nexternal PWM connected, the voltage divider and pot will give a\nvalue between 4V and somthing a bit lower.
 Wire Wire Line
 	1700 6050 1750 6050
 Wire Wire Line
@@ -1525,12 +1506,73 @@ Wire Wire Line
 $Comp
 L Connector:AudioJack2_SwitchT J10
 U 1 1 5E71DBC6
-P 1450 5050
-F 0 "J10" H 1271 4983 50  0000 R CNN
-F 1 "PWMControl" H 1271 5074 50  0000 R CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1450 5050 50  0001 C CNN
-F 3 "~" H 1450 5050 50  0001 C CNN
-	1    1450 5050
+P 1200 4350
+F 0 "J10" H 1021 4283 50  0000 R CNN
+F 1 "PWMControl" H 1021 4374 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1200 4350 50  0001 C CNN
+F 3 "~" H 1200 4350 50  0001 C CNN
+	1    1200 4350
 	1    0    0    1   
 $EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E8B4A79
+P 1500 4150
+F 0 "#PWR?" H 1500 4000 50  0001 C CNN
+F 1 "+5V" H 1515 4323 50  0000 C CNN
+F 2 "" H 1500 4150 50  0001 C CNN
+F 3 "" H 1500 4150 50  0001 C CNN
+	1    1500 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 4250 1500 4250
+Wire Wire Line
+	1500 4250 1500 4150
+$Comp
+L power:GND #PWR?
+U 1 1 5E8BF9F3
+P 1500 4550
+F 0 "#PWR?" H 1500 4300 50  0001 C CNN
+F 1 "GND" V 1505 4422 50  0000 R CNN
+F 2 "" H 1500 4550 50  0001 C CNN
+F 3 "" H 1500 4550 50  0001 C CNN
+	1    1500 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 4450 1500 4450
+Wire Wire Line
+	1500 4450 1500 4550
+Wire Wire Line
+	1500 4250 2000 4250
+Connection ~ 1500 4250
+Wire Wire Line
+	1400 4350 1850 4350
+Wire Wire Line
+	1850 4350 1850 4450
+Wire Wire Line
+	2350 4600 2350 4250
+Wire Wire Line
+	2350 4250 2300 4250
+Wire Wire Line
+	2000 4600 2350 4600
+$Comp
+L power:GND #PWR?
+U 1 1 5E9C47B8
+P 2350 5100
+F 0 "#PWR?" H 2350 4850 50  0001 C CNN
+F 1 "GND" V 2355 4972 50  0000 R CNN
+F 2 "" H 2350 5100 50  0001 C CNN
+F 3 "" H 2350 5100 50  0001 C CNN
+	1    2350 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 5100 2350 5000
+Wire Wire Line
+	2350 4700 2350 4600
+Connection ~ 2350 4600
+Wire Wire Line
+	2350 4600 2450 4600
 $EndSCHEMATC
