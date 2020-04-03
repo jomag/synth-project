@@ -239,17 +239,6 @@ Wire Wire Line
 Connection ~ 4600 3900
 Wire Wire Line
 	4600 3900 4700 3900
-$Comp
-L Amplifier_Operational:TL072 U3
-U 1 1 5DBB60E2
-P 9100 2250
-F 0 "U3" H 9100 1883 50  0000 C CNN
-F 1 "TL072" H 9100 1974 50  0000 C CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 9100 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9100 2250 50  0001 C CNN
-	1    9100 2250
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	8700 2350 8800 2350
 $Comp
@@ -262,17 +251,6 @@ F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 9100 3650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9100 3650 50  0001 C CNN
 	2    9100 3650
 	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U2
-U 3 1 5DBBD5E7
-P 6550 7000
-F 0 "U2" H 6508 7046 50  0000 L CNN
-F 1 "TL072" H 6508 6955 50  0000 L CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 6550 7000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6550 7000 50  0001 C CNN
-	3    6550 7000
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	8300 3750 8400 3750
@@ -1223,17 +1201,6 @@ Wire Wire Line
 Wire Wire Line
 	2300 2250 2300 2400
 $Comp
-L Connector:AudioJack2_SwitchT J4
-U 1 1 5E2636B1
-P 2000 2150
-F 0 "J4" H 1821 2083 50  0000 R CNN
-F 1 "VOct" H 1821 2174 50  0000 R CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2000 2150 50  0001 C CNN
-F 3 "~" H 2000 2150 50  0001 C CNN
-	1    2000 2150
-	1    0    0    1   
-$EndComp
-$Comp
 L Connector:AudioJack2_SwitchT J1
 U 1 1 5E286049
 P 750 2950
@@ -1575,4 +1542,150 @@ Wire Wire Line
 Connection ~ 2350 4600
 Wire Wire Line
 	2350 4600 2450 4600
+$Comp
+L Amplifier_Operational:TL072 U3
+U 3 1 5E8E52EE
+P 6800 1200
+F 0 "U3" H 6758 1246 50  0000 L CNN
+F 1 "TL072" H 6758 1155 50  0000 L CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 6800 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6800 1200 50  0001 C CNN
+	3    6800 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U2
+U 3 1 5E8E71F1
+P 7600 1200
+F 0 "U2" H 7558 1246 50  0000 L CNN
+F 1 "TL072" H 7558 1155 50  0000 L CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 7600 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7600 1200 50  0001 C CNN
+	3    7600 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5E904E0D
+P 6500 1200
+F 0 "C7" V 6248 1200 50  0000 C CNN
+F 1 "0.1u" V 6339 1200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6538 1050 50  0001 C CNN
+F 3 "~" H 6500 1200 50  0001 C CNN
+	1    6500 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0142
+U 1 1 5E906D4D
+P 6700 800
+F 0 "#PWR0142" H 6700 650 50  0001 C CNN
+F 1 "+12V" H 6715 973 50  0000 C CNN
+F 2 "" H 6700 800 50  0001 C CNN
+F 3 "" H 6700 800 50  0001 C CNN
+	1    6700 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0143
+U 1 1 5E90B490
+P 6700 1600
+F 0 "#PWR0143" H 6700 1700 50  0001 C CNN
+F 1 "-12V" H 6715 1773 50  0000 C CNN
+F 2 "" H 6700 1600 50  0001 C CNN
+F 3 "" H 6700 1600 50  0001 C CNN
+	1    6700 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6700 1600 6700 1550
+Wire Wire Line
+	6700 1550 6500 1550
+Wire Wire Line
+	6500 1550 6500 1350
+Connection ~ 6700 1550
+Wire Wire Line
+	6700 1550 6700 1500
+Wire Wire Line
+	6500 1050 6500 850 
+Wire Wire Line
+	6500 850  6700 850 
+Wire Wire Line
+	6700 850  6700 800 
+Wire Wire Line
+	6700 850  6700 900 
+Connection ~ 6700 850 
+$Comp
+L power:+12V #PWR0144
+U 1 1 5E944303
+P 7500 800
+F 0 "#PWR0144" H 7500 650 50  0001 C CNN
+F 1 "+12V" H 7515 973 50  0000 C CNN
+F 2 "" H 7500 800 50  0001 C CNN
+F 3 "" H 7500 800 50  0001 C CNN
+	1    7500 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0145
+U 1 1 5E9447D5
+P 7500 1600
+F 0 "#PWR0145" H 7500 1700 50  0001 C CNN
+F 1 "-12V" H 7515 1773 50  0000 C CNN
+F 2 "" H 7500 1600 50  0001 C CNN
+F 3 "" H 7500 1600 50  0001 C CNN
+	1    7500 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7500 1500 7500 1550
+Wire Wire Line
+	7500 800  7500 850 
+$Comp
+L Device:C C8
+U 1 1 5E95C3AF
+P 7300 1200
+F 0 "C8" V 7048 1200 50  0000 C CNN
+F 1 "0.1u" V 7139 1200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7338 1050 50  0001 C CNN
+F 3 "~" H 7300 1200 50  0001 C CNN
+	1    7300 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 1050 7300 850 
+Wire Wire Line
+	7300 850  7500 850 
+Connection ~ 7500 850 
+Wire Wire Line
+	7500 850  7500 900 
+Wire Wire Line
+	7300 1350 7300 1550
+Wire Wire Line
+	7300 1550 7500 1550
+Connection ~ 7500 1550
+Wire Wire Line
+	7500 1550 7500 1600
+$Comp
+L Amplifier_Operational:TL072 U3
+U 2 1 5EA21AE2
+P 9100 2250
+F 0 "U3" H 9100 1883 50  0000 C CNN
+F 1 "TL072" H 9100 1974 50  0000 C CNN
+F 2 "" H 9100 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9100 2250 50  0001 C CNN
+	2    9100 2250
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J4
+U 1 1 5E2636B1
+P 2000 2150
+F 0 "J4" H 1821 2083 50  0000 R CNN
+F 1 "VOct" H 1821 2174 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 2000 2150 50  0001 C CNN
+F 3 "~" H 2000 2150 50  0001 C CNN
+	1    2000 2150
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
