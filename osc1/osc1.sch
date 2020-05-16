@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title ""
 Date ""
-Rev ""
+Rev "1 (wip)"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -78,44 +78,18 @@ Wire Wire Line
 	5150 3000 5200 3000
 Wire Wire Line
 	5200 3000 5300 3100
-$Comp
-L Device:R R14
-U 1 1 5DA94743
-P 5800 4450
-F 0 "R14" H 5870 4496 50  0000 L CNN
-F 1 "820" H 5870 4405 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5730 4450 50  0001 C CNN
-F 3 "~" H 5800 4450 50  0001 C CNN
-	1    5800 4450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5800 4200 5800 4250
 Wire Wire Line
 	4350 4250 5800 4250
 Connection ~ 4350 3000
 Connection ~ 5800 4250
-Wire Wire Line
-	5800 4250 5800 4300
-$Comp
-L power:-12V #PWR0101
-U 1 1 5DA95585
-P 5800 4750
-F 0 "#PWR0101" H 5800 4850 50  0001 C CNN
-F 1 "-12V" H 5815 4923 50  0000 C CNN
-F 2 "" H 5800 4750 50  0001 C CNN
-F 3 "" H 5800 4750 50  0001 C CNN
-	1    5800 4750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5800 4600 5800 4750
 Text GLabel 4800 3200 0    50   Input ~ 0
 PWMCTL
 Text GLabel 4900 3300 0    50   Input ~ 0
 HARDSYNC
 Wire Wire Line
-	3650 3400 5300 3400
+	3650 3050 5300 3400
 $Comp
 L Device:C C6
 U 1 1 5DA9DC7A
@@ -134,12 +108,12 @@ SOFTSYNC
 $Comp
 L Device:R_POT RV3
 U 1 1 5DAA09C7
-P 3500 3400
-F 0 "RV3" V 3293 3400 50  0000 C CNN
-F 1 "20k" V 3384 3400 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 3500 3400 50  0001 C CNN
-F 3 "~" H 3500 3400 50  0001 C CNN
-	1    3500 3400
+P 3500 3050
+F 0 "RV3" V 3293 3050 50  0000 C CNN
+F 1 "20k" V 3384 3050 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 3500 3050 50  0001 C CNN
+F 3 "~" H 3500 3050 50  0001 C CNN
+	1    3500 3050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -523,8 +497,8 @@ $Comp
 L Device:R R6
 U 1 1 5DC0CF07
 P 2550 2150
-F 0 "R6" V 2343 2150 50  0000 C CNN
-F 1 "100k" V 2434 2150 50  0000 C CNN
+F 0 "R6" V 2450 2150 50  0000 C CNN
+F 1 "100k" V 2550 2150 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2480 2150 50  0001 C CNN
 F 3 "~" H 2550 2150 50  0001 C CNN
 	1    2550 2150
@@ -971,7 +945,7 @@ Wire Wire Line
 Text GLabel 1950 2950 2    50   Output ~ 0
 LINFM
 Wire Wire Line
-	1850 2950 1950 2950
+	1850 2950 1900 2950
 Text GLabel 4750 3600 0    50   Input ~ 0
 LINFM
 Wire Wire Line
@@ -988,9 +962,9 @@ F 3 "" H 3250 3400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3250 3400 3350 3400
+	3250 3400 3350 3050
 Wire Wire Line
-	3500 3550 3500 3700
+	3500 3200 3500 3300
 Wire Wire Line
 	3500 3700 3700 3700
 $Comp
@@ -1057,8 +1031,8 @@ $Comp
 L Device:R_POT RV2
 U 1 1 5E3B2A82
 P 3200 1950
-F 0 "RV2" V 2993 1950 50  0000 C CNN
-F 1 "?" V 3084 1950 50  0000 C CNN
+F 0 "RV2" V 3100 1950 50  0000 C CNN
+F 1 "?" V 3200 1950 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 3200 1950 50  0001 C CNN
 F 3 "~" H 3200 1950 50  0001 C CNN
 	1    3200 1950
@@ -1068,8 +1042,8 @@ $Comp
 L Device:R_POT RV4
 U 1 1 5E3B340D
 P 3600 1950
-F 0 "RV4" V 3393 1950 50  0000 C CNN
-F 1 "?" V 3484 1950 50  0000 C CNN
+F 0 "RV4" V 3500 1950 50  0000 C CNN
+F 1 "?" V 3600 1950 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 3600 1950 50  0001 C CNN
 F 3 "~" H 3600 1950 50  0001 C CNN
 	1    3600 1950
@@ -1079,8 +1053,8 @@ $Comp
 L Device:R R8
 U 1 1 5E3B3E20
 P 3200 2300
-F 0 "R8" V 2993 2300 50  0000 C CNN
-F 1 "?" V 3084 2300 50  0000 C CNN
+F 0 "R8" V 3300 2300 50  0000 C CNN
+F 1 "?" V 3200 2300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3130 2300 50  0001 C CNN
 F 3 "~" H 3200 2300 50  0001 C CNN
 	1    3200 2300
@@ -1090,8 +1064,8 @@ $Comp
 L Device:R R9
 U 1 1 5E3B46EA
 P 3600 2300
-F 0 "R9" V 3393 2300 50  0000 C CNN
-F 1 "?" V 3484 2300 50  0000 C CNN
+F 0 "R9" V 3700 2300 50  0000 C CNN
+F 1 "?" V 3600 2300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3530 2300 50  0001 C CNN
 F 3 "~" H 3600 2300 50  0001 C CNN
 	1    3600 2300
@@ -1167,8 +1141,6 @@ Wire Wire Line
 Wire Wire Line
 	3850 2850 2850 2850
 Connection ~ 2850 2850
-Wire Wire Line
-	2850 2850 2850 3700
 $Comp
 L power:+12V #PWR0134
 U 1 1 5E3F107B
@@ -1184,8 +1156,8 @@ $Comp
 L Device:R R7
 U 1 1 5E3F173B
 P 2850 1950
-F 0 "R7" V 2643 1950 50  0000 C CNN
-F 1 "?" V 2734 1950 50  0000 C CNN
+F 0 "R7" V 2950 1950 50  0000 C CNN
+F 1 "?" V 2850 1950 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2780 1950 50  0001 C CNN
 F 3 "~" H 2850 1950 50  0001 C CNN
 	1    2850 1950
@@ -1672,7 +1644,7 @@ U 2 1 5EA21AE2
 P 9100 2250
 F 0 "U3" H 9100 1883 50  0000 C CNN
 F 1 "TL072" H 9100 1974 50  0000 C CNN
-F 2 "" H 9100 2250 50  0001 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 9100 2250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9100 2250 50  0001 C CNN
 	2    9100 2250
 	1    0    0    1   
@@ -1687,5 +1659,141 @@ F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 200
 F 3 "~" H 2000 2150 50  0001 C CNN
 	1    2000 2150
 	1    0    0    1   
+$EndComp
+Text Notes -2450 4300 0    50   ~ 0
+Troubleshooting:\n\nCurrently no waveforms!!\n\nR7, R8, R9: unsure about values. Used 1k.\n\nR14 (previous, now removed!): thought it should be 820 ohm,\nused 1k instead, but calculation shows\nit should be 600 ohm.\n\nPWM look a bit strange by the jack circuit\nbut seems to behave correctly in practice.\nIt’s easy to get a value between 0 and 5V.\n\nHardsync input is a bit hard to understand,\nbut it’s implemented as figure 4 in CEM3340\ndatasheet.\n\nMissing 1M resistor (now placed as R33) was fixed\nwith creative soldering. Verified once, could benefit\nfrom a second check.\n\nR10 and C4 are connected to VFCI (pin 15). The same\ntwo components are missing on LINFM (pin 13) compared\nto the datasheet. Likely by mistake. Fix: remove R10 and/or\nC4 (C4 is easiest). Not sure if these are required, but if so\nadd them to pin 13 using through hole components.\n\nPin 13 is also missing 1.5M pullup to +12V.
+Text Notes 6300 2850 0    50   ~ 0
+R15:\n10k in CEM3340 sheet\n51k for AS3340
+Text Notes 11900 750  0    50   ~ 0
+Changes revision 1:\n\n- Add missing 1M resistor between\n   pin 7 (after 20k pot) and pin 15.\n- Change value of current limiting resistor\n   R14 from 820 to 680 (optimal: 600) *OR*\n  (preferably) replace R14 with -5V regulator.\n  NOTE! R14 has been removed, and another\n  resistor with same name is now in use.\n- R10 and C4 are most likely connected to wrong pin, see datasheet. TODO
+$Comp
+L Device:R R33
+U 1 1 5EAA3EF0
+P 3500 3450
+F 0 "R33" H 3570 3496 50  0000 L CNN
+F 1 "1M" H 3570 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3430 3450 50  0001 C CNN
+F 3 "~" H 3500 3450 50  0001 C CNN
+	1    3500 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3600 3500 3700
+Wire Wire Line
+	2850 2850 2850 3700
+$Comp
+L Device:R R14
+U 1 1 5EB28376
+P 1700 2600
+F 0 "R14" V 1493 2600 50  0000 C CNN
+F 1 "1.5M" V 1584 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1630 2600 50  0001 C CNN
+F 3 "~" H 1700 2600 50  0001 C CNN
+	1    1700 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 2600 1900 2600
+Wire Wire Line
+	1900 2600 1900 2950
+Connection ~ 1900 2950
+Wire Wire Line
+	1900 2950 1950 2950
+$Comp
+L power:+12V #PWR0146
+U 1 1 5EB35CC9
+P 1450 2500
+F 0 "#PWR0146" H 1450 2350 50  0001 C CNN
+F 1 "+12V" H 1465 2673 50  0000 C CNN
+F 2 "" H 1450 2500 50  0001 C CNN
+F 3 "" H 1450 2500 50  0001 C CNN
+	1    1450 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2500 1450 2600
+Wire Wire Line
+	1450 2600 1550 2600
+$Comp
+L Regulator_Linear:L79L05_SOT89 U4
+U 1 1 5EB2C04A
+P 6600 4950
+F 0 "U4" H 6600 4708 50  0000 C CNN
+F 1 "L79L05_SOT89" H 6600 4799 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 6600 4750 50  0001 C CIN
+F 3 "http://www.farnell.com/datasheets/1827870.pdf" H 6600 4950 50  0001 C CNN
+	1    6600 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR0101
+U 1 1 5DA95585
+P 7250 5050
+F 0 "#PWR0101" H 7250 5150 50  0001 C CNN
+F 1 "-12V" H 7265 5223 50  0000 C CNN
+F 2 "" H 7250 5050 50  0001 C CNN
+F 3 "" H 7250 5050 50  0001 C CNN
+	1    7250 5050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6900 4950 6950 4950
+Wire Wire Line
+	7250 4950 7250 5050
+$Comp
+L power:GND #PWR0147
+U 1 1 5EB3C758
+P 6600 5400
+F 0 "#PWR0147" H 6600 5150 50  0001 C CNN
+F 1 "GND" V 6605 5272 50  0000 R CNN
+F 2 "" H 6600 5400 50  0001 C CNN
+F 3 "" H 6600 5400 50  0001 C CNN
+	1    6600 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5250 6600 5350
+Wire Wire Line
+	5800 4950 6250 4950
+Wire Wire Line
+	5800 4250 5800 4950
+$Comp
+L Device:C C10
+U 1 1 5EBA6D40
+P 6950 5200
+F 0 "C10" H 6850 5100 50  0000 C CNN
+F 1 "0.1u" H 6850 5300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6988 5050 50  0001 C CNN
+F 3 "~" H 6950 5200 50  0001 C CNN
+	1    6950 5200
+	-1   0    0    1   
+$EndComp
+Connection ~ 6250 4950
+Wire Wire Line
+	6250 4950 6300 4950
+Connection ~ 6600 5350
+Wire Wire Line
+	6600 5350 6600 5400
+Wire Wire Line
+	6600 5350 6950 5350
+Wire Wire Line
+	6950 5050 6950 4950
+Connection ~ 6950 4950
+Wire Wire Line
+	6950 4950 7250 4950
+Wire Wire Line
+	6250 5350 6600 5350
+Wire Wire Line
+	6250 5050 6250 4950
+$Comp
+L Device:C C9
+U 1 1 5EBA62B6
+P 6250 5200
+F 0 "C9" H 6150 5300 50  0000 C CNN
+F 1 "0.1u" H 6150 5100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6288 5050 50  0001 C CNN
+F 3 "~" H 6250 5200 50  0001 C CNN
+	1    6250 5200
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
