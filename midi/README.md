@@ -1,4 +1,4 @@
-# Dön Midi to CV interface
+# MIDI to CV interface
 
 ## Dev environment
 
