@@ -673,17 +673,6 @@ Wire Wire Line
 Wire Wire Line
 	7400 2550 7400 2600
 Connection ~ 7000 2550
-$Comp
-L MCU_ST_STM32F0:STM32F070CBTx U2
-U 1 1 5F8F17A6
-P 3600 5650
-F 0 "U2" H 3550 4061 50  0000 C CNN
-F 1 "STM32F070CBTx" H 3550 3970 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 3000 4250 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00141386.pdf" H 3600 5650 50  0001 C CNN
-	1    3600 5650
-	1    0    0    -1  
-$EndComp
 Text Notes 12050 1150 0    50   ~ 0
 References:\n\nhttp://midi-and-more.de/stm32-usbmidicom.htm
 $EndSCHEMATC
